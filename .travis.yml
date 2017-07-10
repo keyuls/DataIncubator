@@ -6,3 +6,8 @@ install: "pip install -r requirements.txt"
 # command to run tests
 script:
   - python pytest.py
+deploy:
+  provider: heroku
+  api_key:
+    secure: "c9e6a97e-4e5e-4b63-9dbf-ddaf30b22f66"
+  app: dataupload
