@@ -11,7 +11,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def upload_image():
-    return render_template('index.html')
+    return render_template('index.html', result= 'page display successfully')
 
 @app.route('/img/',methods=['POST'])
 def submit_image():
@@ -23,5 +23,5 @@ def submit_image():
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
-    app.run(debug=False, port=port, host='0.0.0.0')
-    #app.run(debug=False, port=port, host='127.0.0.1')
+    #app.run(debug=False, port=port, host='0.0.0.0')
+    app.run(debug=False, port=port, host='127.0.0.1')
